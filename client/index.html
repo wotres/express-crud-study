@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test CRUD Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Item</h2>
+        <input type="text" id="itemName" placeholder="Item name">
+        <input type="text" id="itemDescription" placeholder="Item description">
+        <button id="createItem">Create Item</button>
+        <p id="createError" style="color: red;"></p>
+
+        <h2>Update Item</h2>
+        <input type="number" id="updateItemId" placeholder="Item ID for update">
+        <input type="text" id="updateItemName" placeholder="New name">
+        <input type="text" id="updateItemDescription" placeholder="New description">
+        <button id="updateItem">Update Item</button>
+        <p id="updateError" style="color: red;"></p>
+
+        <h2>Delete Item</h2>
+        <input type="number" id="deleteItemId" placeholder="Item ID for delete">
+        <button id="deleteItem">Delete Item</button>
+        <p id="deleteError" style="color: red;"></p>
+
+        <h2>Get All Items</h2>
+        <button id="getItems">Get All Items</button>
+        <ul id="itemsList"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
